@@ -23,7 +23,7 @@ int main()
             scanf("%d", &choice);
             if(choice>4 || choice <0)
             {
-                printf("Invalid choice\n");
+                printf("Invalid choice. Try again\n");
             }
         }while(choice>4 || choice <0);
 
@@ -70,23 +70,47 @@ void menu()
 float printing(int n)
 {
     float price_printing = 200.0;
+    float total;
+    if(n<=50)
+    {
+        total = n*price_printing;
+    }
+    else
+    {
+        total = n*price_printing*0.75;
 
-    return n * price_printing;
+    }
+
+    return total;
 }
 float photocopying(int n)
 {
     float price_photocopying = 100.0;
     float total;
+    if(n<=50)
+    {
+        total = n*price_photocopying;
+    }
+    else
+    {
+        total = n*price_photocopying *0.75;
 
-    total = n*price_photocopying;
+    }
     return total;
 }
 float scanning(int n)
 {
     float price_scanning = 500.0;
     float total;
+    if(n<=50)
+    {
+        total = n*price_scanning;
+    }
+    else
+    {
+        total = n*price_scanning*0.75;
 
-    total = n*price_scanning;
+    }
     return total;
 }
 int input(void)
